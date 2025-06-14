@@ -1,0 +1,39 @@
+[project]
+name = "stacked-diffs"
+version = "0.1.0"
+description = "Stacked diff git management tool"
+authors = [{ name = "Jesse Brizzi", email = "sd@jes.bz" }]
+readme = "README.md"
+requires-python = ">=3.12"
+# No dependencies!
+dependencies = []
+
+[project.scripts]
+sd = "stacked_diffs.main:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "pytest-cov>=4.0.0"]
+
+# Ruff configuration
+[tool.ruff]
+line-length = 120
+select = [
+    "E",
+    "F",
+    "I",
+    "UP",
+    "W",
+    "YTT",
+    "ANN",
+    "C4",
+    "DTZ",
+    "T20",
+    "PYI",
+    "PT",
+    "Q",
+    "RUF",
+    "SIM",
+    "BLE",
+]
+
+extend-ignore = ["T201"]
